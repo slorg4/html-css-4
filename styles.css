@@ -1,0 +1,369 @@
+/* BASIC STYLES */
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+:root{
+    --crunchyroll-color1: #f47521;
+    --crunchyroll-color2: #ef4323;
+    --crunchyroll-color3: #fab818;
+    --crunchyroll-color4: #0a0a0a;
+    --crunchyroll-color5: #23252b;
+    --crunchyroll-color6: #f7873d;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Lato, sans-serif;
+}
+
+h1{
+    font-size: 5.5rem;
+}
+
+h3{
+    font-size: 3.3rem;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.text-medium{
+    font-size: 1.8rem;
+}
+
+.ligth{
+    color: white;
+}
+
+.dark{
+    color: black;
+}
+
+.fa {
+    color: white;
+}
+
+.material-icons{
+    color: white;
+    transform: scale(1.6);
+    height: 40px;
+    margin-top: 9px;
+}
+
+.plan-name{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.page-wrapper{
+    display: block;
+    width: 100%;
+}
+
+/* HEADER CONFIGURATION */
+
+header{
+    position: fixed;
+    top: 0;
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--crunchyroll-color5);
+    z-index: 2;
+}
+
+#header-img{
+    width: 20vw;
+    min-width: 100px;
+    max-width: 180px;
+    margin-right: 20vw;
+}
+
+#nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    justify-content: space-around;
+}
+
+#nav-bar li{
+    list-style: none;
+}
+
+#nav-bar a{
+    text-decoration: none;
+    font-size: 2.1rem;
+    color: white;
+}
+
+/* SECTIONS CONFIGURATION */
+
+#features{
+    margin-top: 50px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(https://static.crunchyroll.com/cr-spa-registration/assets/img/landing/hero_bg@2x.png);
+    background-color: var(--crunchyroll-color4);
+}
+
+#features h1{
+    padding: 150px 20% 40px;
+}
+
+#features form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    row-gap: 15px;
+    margin-bottom: 80px;
+}
+
+#email{
+    width: 40%;
+    font-size: 1.8rem;
+    height: 33px;
+    text-align: center;
+    border: transparent;
+}
+
+#submit{
+    height: 33px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: transparent;
+    background-color: var(--crunchyroll-color1);
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: var(--crunchyroll-color6);
+}
+
+.elements{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 0 50px;
+}
+
+.elements .element-container:first-of-type > p{
+    margin-top: 9px;
+}
+
+.element-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 30px;
+}
+
+#how-it-works{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(
+        90deg,
+        var(--crunchyroll-color3),
+        var(--crunchyroll-color2)
+    );
+}
+
+#how-it-works .text{
+    width: 50%;
+    padding: 200px 80px;
+    text-align: center;
+}
+
+#how-it-works .video{
+    width: 50%;
+    display: grid;
+}
+
+iframe{
+    place-self: center;
+    padding-right: 60px;
+    width: 45vw;
+    height: 25vw;
+    max-width: 800px;
+    max-height: 450px;
+}
+
+#pricing{
+    display: block;
+    padding: 100px 0;
+    background: linear-gradient(
+        90deg,
+        var(--crunchyroll-color5),
+        var(--crunchyroll-color4)
+    );
+}
+
+#pricing .text{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.plans-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+.plan{
+    background-color: white;
+    border: 5px solid var(--crunchyroll-color3);
+    border-radius: 5px;
+    place-self: center;
+    width: max(20vw, 300px);
+    height: max(30vw, 420px);
+    max-width: 350px;
+    max-height: 520px;
+}
+
+.plan h3{
+    text-align: center;
+    height: 20%;
+    padding: 20px;
+}
+
+.plan-name{
+    background-color: var(--crunchyroll-color3);
+    border: 1px solid var(--crunchyroll-color3);
+    text-align: center;
+    height: 10%;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+
+.description{
+    height: 55%;
+    text-align: center;
+}
+
+.description p{
+    margin-bottom: 15px;
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--crunchyroll-color1);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+#footer-elements{
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+#footer-elements a{
+    text-decoration: none;
+    color: white;
+}
+
+/* MEDIA QUERY FOR LOWER RESOLUTIONS*/
+@media only screen and (max-width: 950px){
+    h1{
+        font-size: 3rem;
+    }
+    
+    h3{
+        font-size: 2.3rem;
+        font-weight: lighter;
+        margin-bottom: 10px;
+    }
+    
+    p{
+        font-size: 1.5rem;
+    }
+
+    .plan-name{
+        font-size: 1.8rem;
+    }
+
+    #nav-bar a{
+        font-size: 1.5rem;
+    }
+
+    #nav-bar ul{
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+        margin: 0;
+    }
+
+    #header-img{
+        margin-right: 30px;
+    }
+
+    .elements{
+        grid-template-columns: 50% 50%;
+        row-gap: 30px;
+    }
+
+    .plans-container{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    #how-it-works{
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    #how-it-works .text{
+        width: 100%;
+        height: 50%;
+        padding: 0;
+    }
+
+    #how-it-works .video{
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        padding-top: 30px;
+    }
+
+    iframe{
+        padding: 0;
+        min-width: 350px;
+        min-height: 200px;
+    }
+}
